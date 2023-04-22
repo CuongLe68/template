@@ -1,0 +1,33 @@
+.textItem-wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+
+  /* CSS cho container của sidebar-item */
+  .sidebar-item {
+    width: 100%; /* Độ rộng của sidebar-item */
+    height: 100%; /* Chiều cao của sidebar-item */
+    background-color: #333; /* Màu nền của sidebar-item */
+    padding-top: 20px; /* Khoảng cách giữa cạnh trên của sidebar-item và nội dung bên trong */
+  }
+  
+  /* CSS cho các liên kết trong sidebar-item */
+  .sidebar-item a {
+    padding: 8px 16px; /* Khoảng cách giữa các liên kết */
+    text-decoration: none; /* Không có gạch chân cho liên kết */
+    color: white; /* Màu chữ của liên kết */
+    display: block; /* Hiển thị dạng block để điều chỉnh độ rộng của liên kết */
+  }
+  
+  /* CSS cho hover của các liên kết */
+  .sidebar-item a:hover {
+    background-color: #111; /* Màu nền khi hover */
+  }
+  
+  /* CSS cho nội dung chính của trang web */
+  .content {
+    margin-left: 250px; /* Độ rộng của sidebar-item */
+    padding: 16px; /* Khoảng cách giữa nội dung chính và sidebar-item */
+  }
+}

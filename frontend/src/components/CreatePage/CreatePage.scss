@@ -1,0 +1,124 @@
+.CreatePage-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background: honeydew;
+
+  .form {
+    position: absolute;
+    z-index: 100;
+    background: rgb(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      width: 400px;
+      height: 600px;
+      background: white;
+      border-radius: 10px;
+
+      .form-wrapper {
+        padding: 10px;
+        .col {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          list-style: 20px;
+          margin: 6px 0;
+
+          .left {
+            width: 150px;
+            text-align: left;
+          }
+
+          .value {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    overflow: visible;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100vh;
+    background: burlywood;
+    padding: 10px;
+    overflow: scroll;
+
+    .select {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5%;
+
+      .item {
+        width: 132px;
+        height: 132px;
+        background: white;
+        border: 2px solid #333;
+        margin-bottom: 5%;
+        overflow: scroll;
+      }
+    }
+  }
+
+  .body {
+    width: 100%;
+    height: 100%;
+    padding-left: 22%;
+    display: flex;
+    flex-direction: column;
+
+    .content {
+      height: 100%;
+
+      .wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        min-height: 40px;
+        border: 0.4px dashed #e6d0de;
+      }
+
+      .col {
+        width: 100%;
+        display: flex;
+      }
+    }
+
+    .new-item {
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      border: 2px dashed #e6d0de;
+
+      .btn {
+        background-color: chocolate;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 30px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

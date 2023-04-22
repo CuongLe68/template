@@ -1,0 +1,23 @@
+.page-container {
+  margin: 80px auto 20px;
+  .page-container-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: palegoldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    a {
+      padding: 10px 30px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      background: peru;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 20px;
+    }
+  }
+}

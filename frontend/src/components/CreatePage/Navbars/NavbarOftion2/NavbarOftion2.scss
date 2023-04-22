@@ -1,0 +1,41 @@
+.textItem-wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+  }
+
+  .navbar-item {
+    float: left;
+  }
+
+  .navbar-item:hover {
+    background: red;
+
+    a {
+      color: #f8f8f8;
+    }
+  }
+
+  .navbar-link {
+    display: block;
+    color: #333;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}

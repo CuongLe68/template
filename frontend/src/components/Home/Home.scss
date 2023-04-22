@@ -1,0 +1,65 @@
+.home-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        padding: 10px 30px;
+        border: 1px solid #333;
+        border-radius: 10px;
+        background: peru;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 0 20px;
+        color: aliceblue;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    main {
+        height: 100px;
+        width: 100%;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(0, 0, 0, 40%);
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .box {
+        width: 160px;
+        height: 160px;
+        background: white;
+        border: 2px solid #333;
+    }
+
+    .target {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-image: url('../../../public/logo192.png');
+    }
+
+    .body {
+        width: 100%;
+        min-height: 100vh;
+        margin-top: 200px;
+    }
+
+    .box-1 {
+        width: 500px;
+        height: 160px;
+        background: white;
+        border: 2px solid #333;
+    }
+}
