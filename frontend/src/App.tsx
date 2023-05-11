@@ -1,8 +1,9 @@
-import Home from "./components/Home/Home";
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Page from "./components/Page/Page";
-import CreatePage from "./components/CreatePage/CreatePage";
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CreatePage from './components/CreatePage/CreatePage';
+import Page from './components/Page/Page';
+import Home from './components/Home/Home';
 
 function App() {
   const page = window.location.pathname

@@ -2,18 +2,21 @@ import "./Home.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {Link} from 'react-router-dom'
+import { Grid } from "../../_model/Grids";
 
-var listFile = [];
+var listFile:[] = []
 var page = 1;
 function Home() {
   const [load, setLoad] = useState(false);
 
-  async function getAllPage(page) {
+  async function getAllPage(page:number) {
     const res = await axios.get(
       `http://localhost:8000/v1/products/allProduct/?sort=desc&limit&page=${page}&limitPage=2&sortBy`
-    );
-    listFile = [res.data.data];
-    listFile = listFile[0];
+    )
+    //listFile = res.data.data;    
+    //listFile = listFile[0];
+    let data:Grid
+    console.log(res.data);
     setLoad(true);
   }
 
@@ -52,8 +55,8 @@ function Home() {
       {listFile.length !== 0 ? (
         listFile.map((item) => {
           return (
-            <a key={item._id} href={`http://localhost:3000/${item.router}`}>
-              {item.name}
+            <a href={`http://localhost:3000/$item.router`}>
+              item.name
             </a>
           );
         })

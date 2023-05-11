@@ -12,81 +12,43 @@ function BodyOptions2(props) {
         color: "white",
       }}
     >
-      <section id="banner">
-        <h2>Chào mừng đến với website E-commerce</h2>
-        <p>Hàng nghìn sản phẩm đang chờ bạn khám phá</p>
-        <a href="http://localhost:3000/create-page" class="btn">
-          Xem ngay
+      <div class="home-product">
+        <a class="home-product-item" href="#x">
+          <img
+            class="home-product-item__img"
+            src="https://petstoresaigon.com/wp-content/uploads/2021/06/banh-tron-1-dau-1-247x296.jpg"
+            alt=""  
+          ></img>
+          <h4 class="home-product-item__name">
+            Bóng đồ chơi cho chó - Dây thừng 3 đầu KITTEN
+          </h4>
+          <div class="home-product-item__price">
+            <div class="home-product-item__price-current">100.000đ</div>
+          </div>
+          <div class="home-product-item__action">
+            <span class="home-product-item__like home-product-item__like--liked">
+              <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+              <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+            </span>
+            <div class="home-product-item__rating">
+              <i class="home-product-item__gold fa-solid fa-star"></i>
+              <i class="home-product-item__gold fa-solid fa-star"></i>
+              <i class="home-product-item__gold fa-solid fa-star"></i>
+              <i class="home-product-item__gold fa-solid fa-star"></i>
+              <i class="home-product-item__gold fa-solid fa-star"></i>
+            </div>
+            <div class="home-product-item__sold">8.7k đã bán</div>
+          </div>
+          <div class="home-product-item__origin">
+            <span class="home-product-item__brand">Phụ kiện</span>
+            <span class="home-product-item__orgin-title-name">Thái Lan</span>
+          </div>
+          <div class="home-product-item__favourite">
+            <i class="fa-solid fa-check"></i>
+            <span>Yêu thích</span>
+          </div>
         </a>
-      </section>
-      <section id="products">
-        <div class="product">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk8i6Qq-pMI5cZu1SG7SJxoFsoWibvBa1cJg&usqp=CAU"
-            alt="Sản phẩm 1"
-          />
-          <h3>Sản phẩm 1</h3>
-          <p>Giá: $100</p>
-          <a href="http://localhost:3000/create-page" class="btn">
-            Thêm vào giỏ hàng
-          </a>
-        </div>
-        <div class="product">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzCROvBy10xzAcdfQsKUymzP-LV97xhGPNA&usqp=CAU"
-            alt="Sản phẩm 2"
-          />
-          <h3>Sản phẩm 2</h3>
-          <p>Giá: $200</p>
-          <a href="http://localhost:3000/create-page" class="btn">
-            Thêm vào giỏ hàng
-          </a>
-        </div>
-        <div class="product">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk8i6Qq-pMI5cZu1SG7SJxoFsoWibvBa1cJg&usqp=CAU"
-            alt="Sản phẩm 3"
-          />
-          <h3>Sản phẩm 3</h3>
-          <p>Giá: $150</p>
-          <a href="http://localhost:3000/create-page" class="btn">
-            Thêm vào giỏ hàng
-          </a>
-        </div>
-        <div class="product">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk8i6Qq-pMI5cZu1SG7SJxoFsoWibvBa1cJg&usqp=CAU"
-            alt="Sản phẩm 1"
-          />
-          <h3>Sản phẩm 1</h3>
-          <p>Giá: $100</p>
-          <a href="http://localhost:3000/create-page" class="btn">
-            Thêm vào giỏ hàng
-          </a>
-        </div>
-        <div class="product">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzCROvBy10xzAcdfQsKUymzP-LV97xhGPNA&usqp=CAU"
-            alt="Sản phẩm 2"
-          />
-          <h3>Sản phẩm 2</h3>
-          <p>Giá: $200</p>
-          <a href="http://localhost:3000/create-page" class="btn">
-            Thêm vào giỏ hàng
-          </a>
-        </div>
-        <div class="product">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk8i6Qq-pMI5cZu1SG7SJxoFsoWibvBa1cJg&usqp=CAU"
-            alt="Sản phẩm 3"
-          />
-          <h3>Sản phẩm 3</h3>
-          <p>Giá: $150</p>
-          <a href="http://localhost:3000/create-page" class="btn">
-            Thêm vào giỏ hàng
-          </a>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

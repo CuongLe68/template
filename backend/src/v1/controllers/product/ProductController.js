@@ -14,15 +14,15 @@ async function handleRenderProducts(products, req, res) {
   const totalPages = Math.ceil(products.length / limitPage); //làm tròn lên số page
   if (page > totalPages) {
     res.status(404).json({
-      code: 404,
-      status: "Failed to find product",
+      statusCode: 404,
+      message: "Failed to find product",
     });
   } else {
     paginatedProducts = await products.slice(startIndex, endIndex);
 
     res.status(200).json({
-      code: 200,
-      status: "success",
+      statusCode: 200,
+      message: "success",
       category: req.params.category ? req.params.category : "All",
       totalProduct: products.length,
       currentPage: page,
@@ -40,13 +40,13 @@ async function createProduct(req, res) {
     const router = await Product.findOne({ router: req.body.router });
     if (!category) {
       res.status(404).json({
-        code: 404,
-        status: "Category not found",
+        statusCode: 404,
+        message: "Category not found",
       });
     } else if (router) {
       res.status(404).json({
-        code: 404,
-        status: "router already exists",
+        statusCode: 404,
+        message: "router already exists",
       });
     } else if (category && !router) {
       let dateStart = new Date();
@@ -65,7 +65,7 @@ async function createProduct(req, res) {
         countInSold: req.body.countInSold,
         countPromotional: req.body.countPromotional,
         hidden: {
-          status: false,
+          message: false,
           time: {
             timeStart: dateStart, //ngày thêm sản phẩm vào thùng rác
             timeEnd: dateEnd.setDate(dateStart.getDate() + 15), //ngày xóa sản phẩm khỏi thùng rác,xóa vĩnh viễn
@@ -82,15 +82,15 @@ async function createProduct(req, res) {
       await product.save(); // Lưu thông tin sản phẩm
       await page.save(); // Lưu thông tin page
       res.status(201).json({
-        code: 201,
-        status: "Create a successful new product",
+        statusCode: 201,
+        message: "Create a successful new product",
         data: product,
       });
     }
   } catch (err) {
     res.status(400).json({
-      code: 400,
-      status: `Failed to create new product`,
+      statusCode: 400,
+      message: `Failed to create new product`,
     });
   }
 }
@@ -103,8 +103,8 @@ async function getAllProducts(req, res) {
     handleRenderProducts(products, req, res);
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: "Failed to fetch products",
+      statusCode: 500,
+      message: "Failed to fetch products",
     });
   }
 }
@@ -116,8 +116,8 @@ async function getPage(req, res) {
     res.send(`${page.file}`);
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: `Failed to fetch Page with id ${req.params.id}`,
+      statusCode: 500,
+      message: `Failed to fetch Page with id ${req.params.id}`,
     });
   }
 }
@@ -128,19 +128,19 @@ async function getProductById(req, res) {
     const product = await Product.findById(req.params.id);
     product
       ? res.status(200).json({
-          code: 200,
-          status: "Success",
+          statusCode: 200,
+          message: "Success",
           data: product,
         })
       : res.status(404).json({
-          code: 404,
-          status: "Failed to find product",
+          statusCode: 404,
+          message: "Failed to find product",
           data: [],
         });
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: `Failed to fetch product with id ${req.params.id}`,
+      statusCode: 500,
+      message: `Failed to fetch product with id ${req.params.id}`,
     });
   }
 }
@@ -160,8 +160,8 @@ async function getProductsLimitCategory(req, res) {
     handleRenderProducts(products, req, res);
   } catch (error) {
     res.status(500).json({
-      code: 500,
-      status: `Failed to fetch products limit and category`,
+      statusCode: 500,
+      message: `Failed to fetch products limit and category`,
     });
   }
 }
@@ -198,8 +198,8 @@ async function sortProductsByCategory(req, res) {
     handleRenderProducts(sortedProducts, req, res);
   } catch (error) {
     res.status(500).json({
-      code: 500,
-      status: `Failed to fetch products sortOrder`,
+      statusCode: 500,
+      message: `Failed to fetch products sortOrder`,
     });
   }
 }
@@ -212,13 +212,13 @@ async function updateProduct(req, res) {
     const router = await ProductFile.findOne({ router: req.body.lastRouter });
     if (!idProduct) {
       res.status(400).json({
-        code: 400,
-        status: `Product does not exist`,
+        statusCode: 400,
+        message: `Product does not exist`,
       });
     } else if (!router) {
       res.status(400).json({
-        code: 400,
-        status: `router does not exist`,
+        statusCode: 400,
+        message: `router does not exist`,
       });
     } else if (idProduct && router) {
       //update thông tin product
@@ -238,15 +238,15 @@ async function updateProduct(req, res) {
       );
 
       res.status(200).json({
-        code: 200,
-        status: "update success",
+        statusCode: 200,
+        message: "update success",
         data: updatedProduct, // ở frontend sẽ sử dụng spread để ghi đè vd:{...allProduct, updateProduct}
       });
     }
   } catch (err) {
     res.status(400).json({
-      code: 400,
-      status: `Failed to update product with id ${req.params.productId}`,
+      statusCode: 400,
+      message: `Failed to update product with id ${req.params.productId}`,
     });
   }
 }
@@ -259,18 +259,18 @@ async function updateManyProduct(req, res) {
     const file = await req.body.dataUpdate.file;
     if (listId <= 0) {
       res.status(400).json({
-        code: 400,
-        status: `update failed products`,
+        statusCode: 400,
+        message: `update failed products`,
       });
     } else if (router) {
       res.status(400).json({
-        code: 400,
-        status: `not allowed to change router`,
+        statusCode: 400,
+        message: `not allowed to change router`,
       });
     } else if (file) {
       res.status(400).json({
-        code: 400,
-        status: `not allowed to change file`,
+        statusCode: 400,
+        message: `not allowed to change file`,
       });
     } else if (listId > 0 && !router && !file) {
       await Product.updateMany(
@@ -278,15 +278,15 @@ async function updateManyProduct(req, res) {
         req.body.dataUpdate
       );
       res.status(200).json({
-        code: 200,
-        status: "update success",
+        statusCode: 200,
+        message: "update success",
         data: req.body.productIds, //trả về những id đã cập nhật
       });
     }
   } catch (err) {
     res.status(400).json({
-      code: 400,
-      status: `update failed products`,
+      statusCode: 400,
+      message: `update failed products`,
     });
   }
 }
@@ -297,22 +297,22 @@ async function deleteProduct(req, res) {
     const currentProduct = await Product.findById(req.params.id)
     if(!currentProduct) {
       res.status(404).json({
-        code: 404,
-        status: `No products found`,
+        statusCode: 404,
+        message: `No products found`,
       });
     } else {
       await Product.findByIdAndDelete(req.params.id); //Xóa sản phẩm
       await ProductFile.findOneAndDelete({router: currentProduct.router}); //Xóa file của sản phẩm
       await ProductComment.deleteMany({ productId: req.params.id }); //Xóa tất cả comment của sản phẩm bị xóa
       res.status(200).json({
-        code: 200,
-        status: "delete success",
+        statusCode: 200,
+        message: "delete success",
       });
     }
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: `Serrver error ${err}`,
+      statusCode: 500,
+      message: `Serrver error ${err}`,
     });
   }
 }
@@ -334,20 +334,20 @@ async function deleteManyProduct(req, res) {
       //Xóa tất cả comment của từng sản phẩm bị xóa
       await ProductComment.deleteMany({ productId: { $in: listProductId } });
       res.status(200).json({
-        code: 200,
-        status: "delete success",
+        statusCode: 200,
+        message: "delete success",
         data: req.body.productIds,
       });
     } else {
       res.status(404).json({
-        code: 404,
-        status: `delete failed products`,
+        statusCode: 404,
+        message: `delete failed products`,
       });
     }
   } catch (err) {
     res.status(404).json({
-      code: 404,
-      status: `delete failed products`,
+      statusCode: 404,
+      message: `delete failed products`,
     });
   }
 }
@@ -371,20 +371,20 @@ async function createComment(req, res) {
 
       await newComment.save();
       res.status(201).json({
-        code: 201,
-        status: "new comment",
+        statusCode: 201,
+        message: "new comment",
         data: newComment,
       });
     } else {
       res.status(404).json({
-        code: 404,
-        status: "product not found",
+        statusCode: 404,
+        message: "product not found",
       });
     }
   } catch (err) {
     res.status(400).json({
-      code: 400,
-      status: `error when the comment ${err}`,
+      statusCode: 400,
+      message: `error when the comment ${err}`,
     });
   }
 }
@@ -414,16 +414,16 @@ async function getCommentbyIdProduct(req, res) {
 
     if (page > totalPages) {
       res.status(404).json({
-        code: 404,
-        status: "Failed to find comment",
+        statusCode: 404,
+        message: "Failed to find comment",
         data: [],
       });
     } else {
       paginatedlistComments = listComment.slice(startIndex, endIndex);
 
       res.status(200).json({
-        code: 200,
-        status: "success",
+        statusCode: 200,
+        message: "success",
         totalComments: listComment.length,
         currentPage: page,
         totalPages: totalPages,
@@ -433,8 +433,8 @@ async function getCommentbyIdProduct(req, res) {
     }
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: "Failed to get all Comment",
+      statusCode: 500,
+      message: "Failed to get all Comment",
     });
   }
 }
@@ -464,16 +464,16 @@ async function getCommentbyIdUser(req, res) {
 
     if (page > totalPages) {
       res.status(404).json({
-        code: 404,
-        status: "Failed to find comment",
+        statusCode: 404,
+        message: "Failed to find comment",
         data: [],
       });
     } else {
       paginatedlistComments = listComment.slice(startIndex, endIndex);
 
       res.status(200).json({
-        code: 200,
-        status: "success",
+        statusCode: 200,
+        message: "success",
         totalComments: listComment.length,
         currentPage: page,
         totalPages: totalPages,
@@ -483,8 +483,8 @@ async function getCommentbyIdUser(req, res) {
     }
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: "Failed to get all Comment",
+      statusCode: 500,
+      message: "Failed to get all Comment",
     });
   }
 }
@@ -498,14 +498,14 @@ async function updateComment(req, res) {
       { new: true } //để trả về comment đã được câp nhật mới
     );
     res.status(200).json({
-      code: 200,
-      status: "update comment success",
+      statusCode: 200,
+      message: "update comment success",
       data: updatedComment,
     });
   } catch (err) {
     res.status(400).json({
-      code: 400,
-      status: `Failed to update comment with id ${req.params.productId}`,
+      statusCode: 400,
+      message: `Failed to update comment with id ${req.params.productId}`,
     });
   }
 }
@@ -515,13 +515,13 @@ async function deleteComment(req, res) {
   try {
     await ProductComment.findByIdAndDelete(req.params.id);
     res.status(200).json({
-      code: 204,
-      status: "delete comment success",
+      statusCode: 204,
+      message: "delete comment success",
     });
   } catch (err) {
     res.status(404).json({
-      code: 404,
-      status: `delete comment failed products`,
+      statusCode: 404,
+      message: `delete comment failed products`,
     });
   }
 }
@@ -531,13 +531,13 @@ async function deleteManyCommentbyProduct(req, res) {
   try {
     await ProductComment.deleteMany({ productId: req.params.productId });
     res.status(200).json({
-      code: 200,
-      status: "delete many comment success",
+      statusCode: 200,
+      message: "delete many comment success",
     });
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: `delete failed products`,
+      statusCode: 500,
+      message: `delete failed products`,
     });
   }
 }
@@ -548,13 +548,13 @@ async function deleteManyCommentbyProduct(req, res) {
   try {
     await ProductComment.deleteMany({ productId: req.params.productId });
     res.status(200).json({
-      code: 200,
-      status: "delete many comment success",
+      statusCode: 200,
+      message: "delete many comment success",
     });
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: `delete failed products`,
+      statusCode: 500,
+      message: `delete failed products`,
     });
   }
 }
@@ -565,13 +565,13 @@ async function deleteManyCommentbyUser(req, res) {
   try {
     await ProductComment.deleteMany({ userId: req.params.userId });
     res.status(200).json({
-      code: 200,
-      status: "delete many comment success",
+      statusCode: 200,
+      message: "delete many comment success",
     });
   } catch (err) {
     res.status(500).json({
-      code: 500,
-      status: `delete failed products`,
+      statusCode: 500,
+      message: `delete failed products`,
     });
   }
 }
@@ -587,13 +587,13 @@ async function createCategoryProduct(req, res) {
       });
       const savedCategory = await category.save();
       res.status(200).json({
-        status: "Create a successful new category",
+        message: "Create a successful new category",
         data: savedCategory,
       });
     } else {
       res.status(403).json({
-        code: 403,
-        status: "directory already existsy",
+        statusCode: 403,
+        message: "directory already existsy",
       });
     }
   } catch (err) {
@@ -624,16 +624,16 @@ async function getAllCategoriesProduct(req, res) {
 
     if (page > totalPages) {
       res.status(404).json({
-        code: 404,
-        status: "Failed to find categories",
+        statusCode: 404,
+        message: "Failed to find categories",
         data: [],
       });
     } else {
       paginatedcategoriess = categories.slice(startIndex, endIndex);
 
       res.status(200).json({
-        code: 200,
-        status: "Get all categories successfully",
+        statusCode: 200,
+        message: "Get all categories successfully",
         totalComments: categories.length,
         currentPage: page,
         totalPages: totalPages,
@@ -652,7 +652,7 @@ async function getCategoryProductById(req, res) {
     const category = await Category.findById(req.params.id);
     if (category) {
       res.status(200).json({
-        status: "Get category successfully",
+        message: "Get category successfully",
         data: category,
       });
     } else {
@@ -676,7 +676,8 @@ async function updateCategoryProduct(req, res) {
     );
     if (updatedCategory) {
       res.status(200).json({
-        status: "Update category successfully",
+        statusCode: 200,
+        message: "Update category successfully",
         data: updatedCategory,
       });
     } else {
@@ -693,7 +694,8 @@ async function deleteCategoryProduct(req, res) {
     const deletedCategory = await Category.findByIdAndDelete(req.params.id);
     if (deletedCategory) {
       res.status(200).json({
-        status: "Delete category successfully",
+        statusCode: 200,
+        message: "Delete category successfully",
         data: deletedCategory,
       });
     } else {
@@ -713,20 +715,20 @@ async function deleteManyCategoryProduct(req, res) {
         _id: { $in: listCategoryId },
       });
       res.status(200).json({
-        code: 200,
-        status: "delete success",
+        statusCode: 200,
+        message: "delete success",
         data: req.body.categoryIds,
       });
     } else {
       res.status(404).json({
-        code: 404,
-        status: `delete failed Categorys`,
+        statusCode: 404,
+        message: `delete failed Categorys`,
       });
     }
   } catch (err) {
     res.status(404).json({
-      code: 404,
-      status: `delete failed Categorys`,
+      statusCode: 404,
+      message: `delete failed Categorys`,
     });
   }
 }
