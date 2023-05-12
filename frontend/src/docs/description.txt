@@ -1,0 +1,9 @@
+Các file doc của dự án cho members đọc hiểu project
+
+vd:
++ mô tả dự án
++ cách chạy dự án và cấu hình thư viện
++ tạo 1 component,service,... mới thì các bước như thế nào
++ luồng chạy, vd: component login -> login service -> chuyển page, show data,...
++ docs giải thích mục đích,mô tả,.... -> cho các folders, components, functions,...: vd images: lưu ảnh, service: handle api,data
++ ...

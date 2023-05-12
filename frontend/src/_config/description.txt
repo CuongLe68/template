@@ -1,0 +1,10 @@
+khai báo 1 lớp có các biến dẫn tới link các ảnh,video,...
+
+vd: 
+export const base = 'assets/images/'
+
+export const imagesSrc = {
+    edit : base + 'edit.png',
+    completeEdit: base + 'completeEdit.png',
+    linkImgCancel: base + 'cancel.png'
+}

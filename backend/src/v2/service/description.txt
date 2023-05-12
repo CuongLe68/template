@@ -1,0 +1,1 @@
+call các api, chứa các folder store, reducer,... (redux)

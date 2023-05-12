@@ -1,0 +1,2 @@
+các class format dữ liệu. theo định dạng tự custom
+vd: data={ id: 1, name: 'cuong', time: '123213'} => data={id: string, name: string}

@@ -1,29 +1,39 @@
 import "./Home.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { Grid } from "../../_model/Grids";
 
-var listFile:[] = []
+var listFile: Grid = {
+  statusCode: 0,
+  message: '',
+  data: [],
+};
 var page = 1;
 function Home() {
   const [load, setLoad] = useState(false);
 
-  async function getAllPage(page:number) {
+  async function getAllPage(page: number) {
     const res = await axios.get(
       `http://localhost:8000/v1/products/allProduct/?sort=desc&limit&page=${page}&limitPage=2&sortBy`
-    )
-    //listFile = res.data.data;    
-    //listFile = listFile[0];
-    let data:Grid
-    console.log(res.data);
+    );
+
+    listFile = {
+      statusCode: res.data.statusCode,
+      message: res.data.message,
+      data: res.data.data,
+    };
+    console.log('ở trong: ',listFile.data[0]);
+    
     setLoad(true);
   }
+  console.log('ở ngoài: ',listFile);
 
   const handleNext = () => {
     if (page < 4) {
       page++;
       console.log(page);
+      
       getAllPage(page);
       setLoad(!load);
     }
@@ -39,39 +49,29 @@ function Home() {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => {    
     getAllPage(page);
   }, [load]);
 
   return (
-    <div className="home-container">
-      <div
-        className="button"
-        onClick={() => handleprev()}
-        style={{ border: "2px solid #333", cursor: "pointer" }}
-      >
+    <div className='home-container'>
+      <div className='button' onClick={() => handleprev()} style={{ border: "2px solid #333", cursor: "pointer" }}>
         Previous
       </div>
-      {listFile.length !== 0 ? (
-        listFile.map((item) => {
-          return (
-            <a href={`http://localhost:3000/$item.router`}>
-              item.name
-            </a>
-          );
+      {listFile.data.length !== 0 ? (
+        listFile.data.map((item:any) => {
+          return <a key={item._id} href={`http://localhost:3000/${item.router}`}>{item.name}</a>;
         })
       ) : (
         <div>Loading...</div>
       )}
-      <div
-        className="button"
-        onClick={() => handleNext()}
-        style={{ border: "2px solid #333", cursor: "pointer" }}
-      >
+      <div className='button' onClick={() => handleNext()} style={{ border: "2px solid #333", cursor: "pointer" }}>
         Next
       </div>
 
-      <Link to='/create-page' style={{background: 'yellow', color: 'black'}}>Tạo page</Link>
+      <Link to='/create-page' style={{ background: "yellow", color: "black" }}>
+        Tạo page
+      </Link>
     </div>
   );
 }

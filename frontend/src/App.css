@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+/* css cho những class được sử dụng nhiều nơi, phạm vi toàn bộ page, reset css, li list-style: none, a,....
+vd: 
++ col-4 --> chia 1 box thành 4 cột
++ backgroundWhite: background-color: white; --> css màu chung cho class backgroundWhite
++ load-360deg: {.....} --> các animation quay 360 độ
++ ....
+*/
