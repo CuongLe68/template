@@ -63,7 +63,7 @@ function Home() {
           return <a key={item._id} href={`http://localhost:3000/${item.router}`}>{item.name}</a>;
         })
       ) : (
-        <div>Loading...</div>
+        <div>Loading folder...</div>
       )}
       <div className='button' onClick={() => handleNext()} style={{ border: "2px solid #333", cursor: "pointer" }}>
         Next
