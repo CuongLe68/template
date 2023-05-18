@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Grid } from "../../_model/Grids";
+import {useTranslation} from "react-i18next"
 
 var listFile: Grid = {
   statusCode: 0,
@@ -11,6 +12,7 @@ var listFile: Grid = {
 };
 var page = 1;
 function Home() {
+  const {t} = useTranslation(); //cài đặt để sử dụng ngôn ngữ
   const [load, setLoad] = useState(false);
 
   async function getAllPage(page: number) {
@@ -55,6 +57,7 @@ function Home() {
 
   return (
     <div className='home-container'>
+      {t('welcome')}
       <div className='button' onClick={() => handleprev()} style={{ border: "2px solid #333", cursor: "pointer" }}>
         Previous
       </div>
