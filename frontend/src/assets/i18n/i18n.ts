@@ -4,12 +4,22 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      welcome: "Welcome to React and react-i18next",
+      home: {
+        "btn-next-page": "Next page",
+        "btn-previous-page": "Previous",
+        "loading-data": "Loading data...",
+        "create-page": "Create page",
+      },
     },
   },
   vi: {
     translation: {
-      welcome: "Xin chào react",
+      home: {
+        "btn-next-page": "Trang sau",
+        "btn-previous-page": "Trang trước",
+        "loading-data": "Đang tải dữ liệu...",
+        "create-page": "Tạo trang",
+      },
     },
   },
 };

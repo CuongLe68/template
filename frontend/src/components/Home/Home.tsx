@@ -3,16 +3,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Grid } from "../../_model/Grids";
-import {useTranslation} from "react-i18next"
+import { useTranslation } from "react-i18next";
 
 var listFile: Grid = {
   statusCode: 0,
-  message: '',
+  message: "",
   data: [],
 };
 var page = 1;
 function Home() {
-  const {t} = useTranslation(); //cài đặt để sử dụng ngôn ngữ
+  const { t, i18n } = useTranslation(); //cài đặt để sử dụng ngôn ngữ
   const [load, setLoad] = useState(false);
 
   async function getAllPage(page: number) {
@@ -25,17 +25,13 @@ function Home() {
       message: res.data.message,
       data: res.data.data,
     };
-    console.log('ở trong: ',listFile.data[0]);
-    
+
     setLoad(true);
   }
-  console.log('ở ngoài: ',listFile);
 
   const handleNext = () => {
     if (page < 4) {
       page++;
-      console.log(page);
-      
       getAllPage(page);
       setLoad(!load);
     }
@@ -44,36 +40,56 @@ function Home() {
   const handleprev = () => {
     if (page > 1) {
       page--;
-      console.log(page);
-
       getAllPage(page);
       setLoad(!load);
     }
   };
 
-  useEffect(() => {    
+  const changeLanguge = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
+  useEffect(() => {
     getAllPage(page);
   }, [load]);
 
   return (
     <div className='home-container'>
-      {t('welcome')}
+      <div style={{ margin: "0 10px" }}>
+        <div
+          className='button'
+          style={{ border: "2px solid #333", cursor: "pointer" }}
+          onClick={() => changeLanguge("vi")}>
+          Tiếng Việt
+        </div>
+        <div
+          className='button'
+          style={{ border: "2px solid #333", cursor: "pointer" }}
+          onClick={() => changeLanguge("en")}>
+          Tiếng Anh
+        </div>
+      </div>
+
       <div className='button' onClick={() => handleprev()} style={{ border: "2px solid #333", cursor: "pointer" }}>
-        Previous
+        {t("home.btn-previous-page")}
       </div>
       {listFile.data.length !== 0 ? (
-        listFile.data.map((item:any) => {
-          return <a key={item._id} href={`http://localhost:3000/${item.router}`}>{item.name}</a>;
+        listFile.data.map((item: any) => {
+          return (
+            <a key={item._id} href={`http://localhost:3000/${item.router}`}>
+              {item.name}
+            </a>
+          );
         })
       ) : (
-        <div>Loading folder...</div>
+        <div>{t("home.loading-data")}</div>
       )}
       <div className='button' onClick={() => handleNext()} style={{ border: "2px solid #333", cursor: "pointer" }}>
-        Next
+        {t("home.btn-next-page")}
       </div>
 
       <Link to='/create-page' style={{ background: "yellow", color: "black" }}>
-        Tạo page
+        {t("home.create-page")}
       </Link>
     </div>
   );
