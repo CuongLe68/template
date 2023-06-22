@@ -1,0 +1,29 @@
+{
+  "translation": {
+    "navbar": {
+      "home": "Home",
+      "interface_repository": "Interface repository",
+      "price_list": "Price list",
+      "instructions": "Instructions",
+      "news": "News",
+      "register": "Register",
+      "login": "Login"
+    },
+    "home": {
+      "btn-next-page": "Next page",
+      "btn-previous-page": "Previous",
+      "loading-data": "Loading data...",
+      "create-page": "Create page",
+
+      "customer_service": "Customer service",
+      "business": "Business",
+      "business_description": "Accessing new markets and expanding business scale can create opportunities for new sales, increase revenue, and establish a strong presence across different operational domains.",
+      "collaborator": "Collaborator",
+      "collaborator_description": "Expanding marketing network, reducing advertising costs, implementing online marketing, and deploying marketing campaigns help reach new target customers, expand potential markets, build trust, and enhance credibility.",
+      "blogger": "Blogger",
+      "blogger_description": "Effectively promoting the brand and products involves creating creative and engaging content to introduce the products and attract the attention of potential customers, thereby building trust within the community.",
+      "personal_brand": "Personal brand",
+      "personal_brand_description": "Helping you directly reach the target audience that your personal brand aims for. This helps you expand potential markets and enhance access to specific customer groups."
+    }
+  }
+}

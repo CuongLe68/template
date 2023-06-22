@@ -1,0 +1,29 @@
+{
+  "translation": {
+    "navbar": {
+      "home": "Trang chủ",
+      "interface_repository": "Kho giao diện",
+      "price_list": "Bảng giá",
+      "instructions": "Hướng dẫn",
+      "news": "Tin tức",
+      "register": "Đăng ký",
+      "login": "Đăng nhập"
+    },
+    "home": {
+      "btn-next-page": "Trang sau",
+      "btn-previous-page": "Trang trước",
+      "loading-data": "Đang tải dữ liệu...",
+      "create-page": "Tạo trang",
+
+      "customer_service": "Phục vụ cho khách hàng",
+      "business": "Doanh nghiệp",
+      "business_description": "Tiếp cận được thị trường mới và mở rộng quy mô kinh doanh. Điều này có thể tạo ra cơ hội bán hàng mới, tăng doanh số và đạt được sự hiện diện mạnh mẽ trong các lĩnh vực hoạt động khác nhau.",
+      "collaborator": "Cộng tác viên",
+      "collaborator_description": "Mở rộng mạng lưới tiếp thị, giảm chi phí quảng cáo, tiếp thị trực tuyến và triển khai chiến dịch tiếp thị giúp tiếp cận được đối tượng khách hàng mới, mở rộng thị trường tiềm năng, tạo lòng tin và tăng cường uy tín.",
+      "blogger": "Blogger",
+      "blogger_description": "Quảng bá thương hiệu và sản phẩm một cách hiệu quả tạo ra nội dung sáng tạo và hấp dẫn, từ đó  giới thiệu sản phẩm, thu hút sự chú ý của khách hàng tiềm năng và xây dựng lòng tin từ cộng đồng.",
+      "personal_brand": "Thương hiệu cá nhân",
+      "personal_brand_description": "Giúp tiếp cận trực tiếp đối tượng khách hàng mục tiêu mà thương hiệu cá nhân hướng đến. Điều này giúp bạn mở rộng thị trường tiềm năng và tăng cường tiếp cận với nhóm khách hàng đặc biệt."
+    }
+  }
+}

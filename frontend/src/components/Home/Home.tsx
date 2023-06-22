@@ -1,96 +1,53 @@
 import "./Home.scss";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Grid } from "../../_model/Grids";
 import { useTranslation } from "react-i18next";
+import Navbar from "../Navbar/Navbar";
+import Slide from "../Slide/Slide";
+import Footer from "../Footer/Footer";
 
-var listFile: Grid = {
-  statusCode: 0,
-  message: "",
-  data: [],
-};
-var page = 1;
+import customer from "../../assets/images/customer.png";
+import business from "../../assets/images/business.png";
+import collaborators from "../../assets/images/collaborators.png";
+import blogger from "../../assets/images/blogger.png";
+import brand from "../../assets/images/brand.png";
+
 function Home() {
-  const { t, i18n } = useTranslation(); //cài đặt để sử dụng ngôn ngữ
-  const [load, setLoad] = useState(false);
-
-  async function getAllPage(page: number) {
-    const res = await axios.get(
-      `http://localhost:8000/v1/products/allProduct/?sort=desc&limit&page=${page}&limitPage=2&sortBy`
-    );
-
-    listFile = {
-      statusCode: res.data.statusCode,
-      message: res.data.message,
-      data: res.data.data,
-    };
-
-    setLoad(true);
-  }
-
-  const handleNext = () => {
-    if (page < 4) {
-      page++;
-      getAllPage(page);
-      setLoad(!load);
-    }
-  };
-
-  const handleprev = () => {
-    if (page > 1) {
-      page--;
-      getAllPage(page);
-      setLoad(!load);
-    }
-  };
-
-  const changeLanguge = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
-
-  useEffect(() => {
-    getAllPage(page);
-  }, [load]);
+  const { t } = useTranslation();
 
   return (
-    <div className='home-container'>
-      <div style={{ margin: "0 10px" }}>
-        <div
-          className='button'
-          style={{ border: "2px solid #333", cursor: "pointer" }}
-          onClick={() => changeLanguge("vi")}>
-          Tiếng Việt
-        </div>
-        <div
-          className='button'
-          style={{ border: "2px solid #333", cursor: "pointer" }}
-          onClick={() => changeLanguge("en")}>
-          Tiếng Anh
-        </div>
+    <div>
+      <Navbar />
+      <Slide />
+      <div className='home-container'>
+        <section className='home-customer'>
+          <div className='home-container-header'>
+            <img className='home-container-header-icon' src={customer} alt='' />
+            <h2 className='home-container-header-title'>{t("home.customer_service")}</h2>
+          </div>
+          <div className='home-customer-content'>
+            <div className='home-customer-content-item'>
+              <img src={business} alt='' />
+              <h3>{t("home.business")}</h3>
+              <p>{t("home.business_description")}</p>
+            </div>
+            <div className='home-customer-content-item'>
+              <img src={collaborators} alt='' />
+              <h3>{t("home.collaborator")}</h3>
+              <p>{t("home.collaborator_description")}</p>
+            </div>
+            <div className='home-customer-content-item'>
+              <img src={blogger} alt='' />
+              <h3>{t("home.blogger")}</h3>
+              <p>{t("home.blogger_description")}</p>
+            </div>
+            <div className='home-customer-content-item'>
+              <img src={brand} alt='' />
+              <h3>{t("home.personal_brand")}</h3>
+              <p>{t("home.personal_brand_description")}</p>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <div className='button' onClick={() => handleprev()} style={{ border: "2px solid #333", cursor: "pointer" }}>
-        {t("home.btn-previous-page")}
-      </div>
-      {listFile.data.length !== 0 ? (
-        listFile.data.map((item: any) => {
-          return (
-            <a key={item._id} href={`http://localhost:3000/${item.router}`}>
-              {item.name}
-            </a>
-          );
-        })
-      ) : (
-        <div>{t("home.loading-data")}</div>
-      )}
-      <div className='button' onClick={() => handleNext()} style={{ border: "2px solid #333", cursor: "pointer" }}>
-        {t("home.btn-next-page")}
-      </div>
-
-      <Link to='/create-page' style={{ background: "yellow", color: "black" }}>
-        {t("home.create-page")}
-      </Link>
+      <Footer />
     </div>
   );
 }

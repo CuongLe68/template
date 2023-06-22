@@ -32,7 +32,7 @@ function Page() {
         <div>
           <div className="content"></div>
           <div className="page-container-header">
-            <a href="http://localhost:3000">Home</a>
+            <a href="http://localhost:3000/fake">Home</a>
           </div>
         </div>
       )}
