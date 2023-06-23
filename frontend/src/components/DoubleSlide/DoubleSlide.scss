@@ -1,0 +1,49 @@
+.double-slide-container {  
+  .slick-dots {
+    bottom: -52px !important;
+  }
+
+  .slick-dots li button:before {
+    font-size: 14px;
+  }
+
+  .slick-dots li {
+    margin: 0;
+  }
+
+  .wrapper {
+    display: flex !important;
+
+    .user-image {
+      width: 200px;
+      height: 200px;
+      margin-right: 52px;
+    }
+
+    .user-content {
+      width: 588px;
+      height: 192px;
+      padding: 30px 40px 0;
+      border-radius: 10px;
+      box-shadow: 4px 4px 16px 0px #f5ddfb;
+
+      .user-name {
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .position {
+        color: #000;
+        font-size: 16px;
+        margin-top: 8px;
+      }
+
+      .comment {
+        color: #000;
+        font-size: 16px;
+        margin-top: 24px;
+      }
+    }
+  }
+}

@@ -1,6 +1,10 @@
 .home-container {
   font-family: "Montserrat Alternates";
   padding: 66px 9.93% 10px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .home-container-header {
     padding: 0 10px;
@@ -24,14 +28,109 @@
   }
 
   .home-customer {
-    width: 1212px;
+    width: 100%;
+    max-width: 1212px;
     border-radius: 40px;
     border: 2px solid #e7e1e9;
     padding: 40px 8.26% 72px;
-    box-sizing: border-box;
 
     .home-customer-content {
-        margin-top: 26px;
+      margin-top: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .home-customer-content-item {
+        width: 480px;
+        height: 480px;
+        border-radius: 40px;
+        box-shadow: 4px 4px 16px 0px #f5ddfb;
+        padding: 48px 56px;
+
+        img {
+          width: 150px;
+          height: 150px;
+          margin-bottom: 30px;
+        }
+
+        h3 {
+          line-height: 50px;
+          color: #000;
+          font-size: 32px;
+          font-weight: 600;
+          margin-bottom: 16px;
+        }
+
+        p {
+          color: #54595f;
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+
+      .home-customer-content-item:nth-child(n + 3) {
+        margin-top: 52px;
+      }
+    }
+  }
+
+  .home-design {
+    margin-top: 80px;
+    width: 100%;
+    max-width: 1212px;
+
+    .home-design-content {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 46px;
+      padding: 0 35px;
+
+      .home-design-content-item {
+        width: 354px;
+        height: 400px;
+        padding: 30px 17px 18px;
+        box-shadow: 4px 4px 16px 0px #f5ddfb;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 170px;
+          height: 170px;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          width: 100%;
+          text-align: left;
+          line-height: 30px;
+          color: #8c52ff;
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: #54595f;
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  .home-feedback {
+    margin-top: 67px;
+    width: 100%;
+    max-width: 1212px;
+
+    .home-feedback-content {
+      height: 340px;
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
