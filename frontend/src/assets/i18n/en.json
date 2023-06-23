@@ -35,6 +35,26 @@
       "feedback_name": "LeHoangBaoNgoc",
       "feedback_position": "Consultant at Nike Group",
       "feedback_comment": "Create a truly simple and user-friendly interface, competitively priced, regularly updated Vietnamese localized interface repository, excellent 24/7 support, rated 10/10."
+    },
+    "footer": {
+      "title": "Designing an E-commerce Website",
+      "phone": "Phone: 0899 999 999",
+      "email": "Email: contact@create.com",
+      "address": "Address: 368 Quang Trung, Hai Chau 1, Thanh Khe, Da Nang",
+      "about_us": "About Us",
+      "introduction": "Introduction",
+      "contact": "Contact",
+      "conditions": "Terms and Conditions",
+      "privacy_policy": "Privacy Policy",
+      "documents": "Reference Documents",
+      "blog": "Knowledge Blog",
+      "interface": "Template Interface Repository",
+      "ebook": "Business Documents - Ebooks",
+      "fanpage_management": "Effective Fanpage Management",
+      "name_company": "Technology and Software Solutions Joint Stock Company",
+      "taxes": "Tax ID: 0109922909",
+      "founding_date": "Established Date: May 29, 2023",
+      "industry": "Industry: Marketing Software"
     }
   }
 }

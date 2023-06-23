@@ -2,7 +2,7 @@ import "./SingleSlide.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import banner from "../../assets/images/banner.png";
+import banner from "../../../assets/images/banner.png";
 
 function SingleSlide() {
   const settings = {

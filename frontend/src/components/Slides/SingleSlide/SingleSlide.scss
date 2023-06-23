@@ -1,0 +1,10 @@
+.single-slide-container {
+    .slick-dots {
+        bottom: 15px !important;
+    }
+
+    .slick-dots li button:before {
+        font-size: 10px;
+        color: white !important;
+    }
+}

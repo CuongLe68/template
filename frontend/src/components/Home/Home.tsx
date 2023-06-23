@@ -1,8 +1,8 @@
 import "./Home.scss";
 import { useTranslation } from "react-i18next";
 import Navbar from "../Navbar/Navbar";
-import SingleSlide from "../SingleSlide/SingleSlide";
-import DoubleSlide from "../DoubleSlide/DoubleSlide";
+import SingleSlide from "../Slides/SingleSlide/SingleSlide";
+import DoubleSlide from "../Slides/DoubleSlide/DoubleSlide";
 import Footer from "../Footer/Footer";
 
 import customer from "../../assets/images/customer.png";
