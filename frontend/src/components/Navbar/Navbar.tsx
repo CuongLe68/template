@@ -19,8 +19,8 @@ function Navbar() {
         <div className='navbar-menu-title'>{t("navbar.news")}</div>
       </div>
       <div className='navbar-right'>
-        <button className='navbar-right-btn btn-register'>{t("navbar.register")}</button>
-        <button className='navbar-right-btn btn-login'>{t("navbar.login")}</button>
+        <Link to='/register' className='navbar-right-btn btn-register'>{t("navbar.register")}</Link>
+        <Link to='/login' className='navbar-right-btn btn-login'>{t("navbar.login")}</Link>
       </div>
     </div>
   );
