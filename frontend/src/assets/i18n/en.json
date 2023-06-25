@@ -55,6 +55,25 @@
       "taxes": "Tax ID: 0109922909",
       "founding_date": "Established Date: May 29, 2023",
       "industry": "Industry: Marketing Software"
+    },
+    "register": {
+      "title": "Welcome",
+      "description": "Welcome to @Create!",
+      "email": "Email address",
+      "email_description": "Email address is required",
+      "phone": "Enter phone number",
+      "phone_description": "Phone number is required",
+      "code": "Enter verification code",
+      "get_code": "Get code",
+      "code_description": "Please enter the verification code",
+      "full_name": "Your full name",
+      "full_name_description": "Name is required",
+      "password": "Password",
+      "password_description": "Password is required",
+      "register_phone": "Register with phone number",
+      "register_email": "Register with email",
+      "login": "Log in",
+      "register": "Register"
     }
   }
 }

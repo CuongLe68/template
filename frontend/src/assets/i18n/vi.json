@@ -55,6 +55,25 @@
       "taxes": "Mã Số Thuế: 0109922909",
       "founding_date": "Ngày Thành Lập: 29/05/2023",
       "industry": "Lĩnh Vực: Phần mềm Marketing"
+    },
+    "register": {
+      "title": "Wellcome",
+      "description": "Chào mừng bạn đến với @Create!",
+      "email": "Địa chỉ email",
+      "email_description": "Không được để trống email",
+      "phone": "Nhập số điện thoại",
+      "phone_description": "Không được để trống số điện thoại",
+      "code": "Nhập mã xác nhận",
+      "get_code": "Lấy mã",
+      "code_description": "Vui lòng nhập mã xác nhận",
+      "full_name": "Họ và tên của bạn",
+      "full_name_description": "Không được để trống tên",
+      "password": "Mật khẩu",
+      "password_description": "Không được để trống mật khẩu",
+      "register_phone": "Đăng ký bằng số điện thoại",
+      "register_email": "Đăng ký bằng email",
+      "login": "Đăng nhập",
+      "register": "Đăng ký"
     }
   }
 }
