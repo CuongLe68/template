@@ -74,6 +74,31 @@
       "register_email": "Register with email",
       "login": "Log in",
       "register": "Register"
+    },
+    "login": {
+      "not_member": "Not a member?",
+      "register_now": "Register now",
+      "title": "Welcome",
+      "description": "Welcome back!",
+      "email": "Email address",
+      "email_description": "Email address is required",
+      "password": "Password",
+      "password_description": "Password is required",
+      "forgot_password": "Forgot password?",
+      "back_login": "Back to login",
+      "login": "Log in",
+      "login_other": "or continue with",
+      "phone": "Enter phone number",
+      "phone_description": "Phone number is required",
+      "code": "Enter verification code",
+      "get_code": "Get code",
+      "code_description": "Please enter the verification code",
+      "continue": "Continue",
+      "new_password": "Enter new password",
+      "new_password_description": "Please enter a new password",
+      "re_new_password": "Re-enter new password",
+      "re_new_password_description": "Please re-enter the new password",
+      "completed": "Completed"
     }
   }
 }

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import bannerLogin from "../../assets/images/banner-login.png";
 import eye from "../../assets/images/eye.png";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Register() {
   const [formRegister, setFormRegister] = useState("email");

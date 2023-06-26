@@ -74,6 +74,31 @@
       "register_email": "Đăng ký bằng email",
       "login": "Đăng nhập",
       "register": "Đăng ký"
+    },
+    "login": {
+      "not_member": "Không phải thành viên?",
+      "register_now": "Đăng ký ngay",
+      "title": "Wellcome",
+      "description": "Chào mừng bạn đã quay trở lại!",
+      "email": "Địa chỉ email",
+      "email_description": "Không được để trống email",
+      "password": "Mật khẩu",
+      "password_description": "Không được để trống mật khẩu", 
+      "forgot_password": "Quên mật khẩu?",
+      "back_login":"Quay lại đăng nhập",
+      "login": "Đăng nhập",
+      "login_other": "hoặc tiếp tục với",
+      "phone": "Nhập số điện thoại",
+      "phone_description": "Không được để trống số điện thoại",
+      "code": "Nhập mã xác nhận",
+      "get_code": "Lấy mã",
+      "code_description": "Vui lòng nhập mã xác nhận",
+      "continue": "Tiếp tục",
+      "new_password": "Nhập mật khẩu mới",
+      "new_password_description": "Vui lòng nhập mật khẩu mới",
+      "re_new_password": "Nhập lại mật khẩu mới",
+      "re_new_password_description": "Vui lòng nhập lại mật khẩu mới",
+      "completed": "Hoàn Thành"
     }
   }
 }
