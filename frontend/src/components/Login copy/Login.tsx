@@ -67,7 +67,7 @@ function Login() {
                 {false ? <span>*{t("login.password_description")}</span> : ""}
               </div>
               <div className='login-right-navigate'>
-                <Link className='login-right-navigate-text' to='/login/forgot-password'>
+                <Link className='login-right-navigate-text' to='/login'>
                   {t("login.forgot_password")}
                 </Link>
               </div>
@@ -109,7 +109,7 @@ function Login() {
               </div>
 
               <div className='login-right-navigate'>
-                <Link className='login-right-navigate-text' to='/login/forgot-password'>
+                <Link className='login-right-navigate-text' to='/login'>
                   {t("login.forgot_password")}
                 </Link>
               </div>
