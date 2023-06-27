@@ -12,10 +12,11 @@ const publicRoutes = [
     { path: '/fake', component: HomeF },
 
     { path: '/', component: Home },
-    { path: `${page}`, component: Page },
     { path: '/register', component: Register },
     { path: '/login', component: Login },
     { path: '/login/forgot-password', component: ForgotPassword },
+
+    { path: `${page}`, component: Page }, //để cuối cùng, khi người dùng click vào 1 sản phẩm thì truy cập tới website đó
 ]
 
 //routes đã login

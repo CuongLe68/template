@@ -99,6 +99,15 @@
       "re_new_password": "Nhập lại mật khẩu mới",
       "re_new_password_description": "Vui lòng nhập lại mật khẩu mới",
       "completed": "Hoàn Thành"
+    },
+    "notification": {
+      "success": "Thành công",
+      "success_description": "Đăng nhập thành công",
+      "warning": "Cảnh báo",
+      "warning_description": "Lỗi chưa xác định",
+      "failed": "Thất bại",
+      "failed_description": "Đăng nhập thất bại",
+      "close": "Đóng"
     }
   }
 }

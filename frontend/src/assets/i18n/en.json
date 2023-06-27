@@ -99,6 +99,15 @@
       "re_new_password": "Re-enter new password",
       "re_new_password_description": "Please re-enter the new password",
       "completed": "Completed"
+    },
+    "notification": {
+      "success": "Success",
+      "success_description": "Login successful",
+      "warning": "Warning",
+      "warning_description": "Undetermined error",
+      "failed": "Failed",
+      "failed_description": "Login failed",
+      "close": "Close"
     }
   }
 }

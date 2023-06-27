@@ -20,7 +20,7 @@ function Home() {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <>
       <Navbar />
       <SingleSlide />
       <div className='home-container'>
@@ -92,7 +92,7 @@ function Home() {
         </section>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
