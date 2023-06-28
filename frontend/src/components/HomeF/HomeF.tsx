@@ -88,7 +88,7 @@ function HomeF() {
         {t("home.btn-next-page")}
       </div>
 
-      <Link to='/create-page' style={{ background: "yellow", color: "black" }}>
+      <Link to='/home/create-page' style={{ background: "yellow", color: "black" }}>
         {t("home.create-page")}
       </Link>
     </div>
