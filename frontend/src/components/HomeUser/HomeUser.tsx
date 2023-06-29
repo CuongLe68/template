@@ -3,6 +3,7 @@ import LadingPage from "./LadingPage/LadingPage";
 import SideBar from "./SideBar/SideBar";
 import "./HomeUser.scss";
 import User from "./User/User";
+import { Route, Routes } from "react-router-dom";
 
 function HomeUser() {
   return (
@@ -10,7 +11,10 @@ function HomeUser() {
       <SideBar />
       <div className='home-user-container-right'>
         <Header />
-        <LadingPage />
+        <Routes>
+          <Route path='lading-page' element={<LadingPage />} />
+          <Route path='user' element={<User />} />
+        </Routes>
       </div>
     </div>
   );

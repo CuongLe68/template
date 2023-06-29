@@ -9,6 +9,7 @@ import HomeUser from "../components/HomeUser/HomeUser";
 
 //route chưa login
 const page = window.location.pathname;
+
 const publicRoutes = [
     { path: '/fake', component: HomeF },
 
@@ -20,10 +21,10 @@ const publicRoutes = [
 
 //routes đã login
 const privateRoutes = [
-    { path: '/home', component: HomeUser },
+    { path: '/home/*', component: HomeUser },
     { path: '/home/create-page', component: CreatePage },
 
-    { path: `/${page}`, component: Page }, //để cuối cùng, khi người dùng click vào 1 sản phẩm thì truy cập tới website đó
+    //{ path: `/${page}`, component: Page }, //để cuối cùng, khi người dùng click vào 1 sản phẩm thì truy cập tới website đó
 ]
 
 export {publicRoutes, privateRoutes}
