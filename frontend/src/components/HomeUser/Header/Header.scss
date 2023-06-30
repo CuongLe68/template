@@ -1,3 +1,50 @@
 .header-container {
-  background-color: peru;
+  z-index: 998;
+  background-color: #fff;
+  position: fixed;
+  width: -webkit-fill-available;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .header-container-user {
+    display: flex;
+    padding-right: 35px;
+
+    .header-container-logo {
+      margin-right: 10px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+    }
+
+    .header-container-info {
+      .header-container-info-name {
+        color: #000;
+      }
+      .header-container-info-account {
+        color: #f33;
+      }
+
+      .header-container-info-name,
+      .header-container-info-account {
+        max-width: 170px;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 20px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
 }

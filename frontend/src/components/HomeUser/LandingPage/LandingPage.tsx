@@ -1,15 +1,15 @@
-import "./LadingPage.scss";
+import "./LandingPage.scss";
 import { useTranslation } from "react-i18next";
 
 import logoIcon from "../../assets/images/logo-icon.png";
 
-function LadingPage() {  
+function LandingPage() {  
   const { t } = useTranslation();
   return (
-    <div className='ladingPage-container'>
-      trang lading page
+    <div className='landingPage-container'>
+      trang landing page
     </div>
   );
 }
 
-export default LadingPage;
+export default LandingPage;

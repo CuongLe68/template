@@ -108,6 +108,22 @@
       "failed": "Failed",
       "failed_description": "Login failed",
       "close": "Close"
+    },
+    "home_sidebar": {
+      "landing_title": "Landing page",
+      "bio_title": "Bio interface",
+      "qrcode_title": "QR code",
+      "page_ai_title": "Page AI",
+      "help_title": "Help",
+      "news_title": "News",
+      "manage_title": "Account management",
+      "user_title": "Personal information",
+      "setting_title": "Page management",
+      "up_level_title": "Upgrade account",
+      "history_title": "Transaction history"
+    },
+    "home_header": {
+      "package_free": "Free package"
     }
   }
 }

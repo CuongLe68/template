@@ -83,9 +83,9 @@
       "email": "Địa chỉ email",
       "email_description": "Không được để trống email",
       "password": "Mật khẩu",
-      "password_description": "Không được để trống mật khẩu", 
+      "password_description": "Không được để trống mật khẩu",
       "forgot_password": "Quên mật khẩu?",
-      "back_login":"Quay lại đăng nhập",
+      "back_login": "Quay lại đăng nhập",
       "login": "Đăng nhập",
       "login_other": "hoặc tiếp tục với",
       "phone": "Nhập số điện thoại",
@@ -108,6 +108,22 @@
       "failed": "Thất bại",
       "failed_description": "Đăng nhập thất bại",
       "close": "Đóng"
+    },
+    "home_sidebar": {
+      "landing_title": "Landing page",
+      "bio_title": "Giao diện Bio",
+      "qrcode_title": "QR code",
+      "page_ai_title": "Page AI",
+      "help_title": "Hướng dẫn",
+      "news_title": "Tin tức",
+      "manage_title": "Quản lí tài khoản",
+      "user_title": "Thông tin cá nhân",
+      "setting_title": "Quản lí page",
+      "up_level_title": "Nâng cấp tài khoản",
+      "history_title": "Lịch sử giao dịch"
+    },
+    "home_header": {
+      "package_free": "Gói miễn phí"
     }
   }
 }
