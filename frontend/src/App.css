@@ -69,3 +69,35 @@ vd:
 + load-360deg: {.....} --> các animation quay 360 độ
 + ....
 */
+
+/* scroll bar */
+html ::-webkit-scrollbar {
+  border-radius: 0px;
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0); /*thanh cố định*/
+}
+
+html ::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #666; /* thanh cuộn*/
+}
+
+html ::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}

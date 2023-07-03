@@ -4,8 +4,11 @@ import "./HomeUser.scss";
 import User from "./User/User";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./LandingPage/LandingPage";
+import useHandlePageBar from "../../_helper/useHandlePageBar";
 
 function HomeUser() {
+  useHandlePageBar('sidebar_0')
+
   return (
     <div className='home-user-container'>
       <SideBar />
