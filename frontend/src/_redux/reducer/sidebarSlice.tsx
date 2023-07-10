@@ -5,6 +5,7 @@ const sidebarSlice = createSlice({
   initialState: {
     sidebar: {
       currentPage: 0,
+      isShowSideBar: true,
       isFetching: false,
       error: false,
     },
@@ -21,8 +22,21 @@ const sidebarSlice = createSlice({
       state.sidebar.isFetching = false;
       state.sidebar.error = true;
     },
+
+    showSidebarStart: (state) => {
+      state.sidebar.isFetching = true;
+    },
+    showSidebarSuccess: (state, action) => {
+      state.sidebar.isFetching = false;
+      state.sidebar.isShowSideBar = action.payload;
+    },
+    showSidebarFailed: (state) => {
+      state.sidebar.isFetching = false;
+      state.sidebar.error = true;
+    },
   },
 });
 
-export const { sidebarStart, sidebarSuccess, sidebarFailed } = sidebarSlice.actions;
+export const { sidebarStart, sidebarSuccess, sidebarFailed, showSidebarStart, showSidebarSuccess, showSidebarFailed } =
+  sidebarSlice.actions;
 export default sidebarSlice.reducer;
