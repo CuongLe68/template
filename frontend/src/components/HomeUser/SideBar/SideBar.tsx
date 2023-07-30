@@ -57,7 +57,7 @@ function SideBar() {
       <div className='sidebar-menu' onClick={() => setIsShow(!isShow)} style={style.sidebarMenuStyle}>
         <FontAwesomeIcon icon={faBars} />
       </div>
-      <a href='/home' className='sidebar-logo'>
+      <a href='/' className='sidebar-logo'>
         <img src={style.sidebarLogoImg} alt='' style={style.sidebarLogoImgStyle} />
       </a>
       <Link to='/home/landing-page' className={`sidebar-item ${currentPage === "sidebar_1" ? "active" : ""}`}>

@@ -39,7 +39,7 @@ function Login() {
   return (
     <>
       {showNotification ? (
-        <Notification result={true} messages={t("notification.success_description")} navigate='/home' />
+        <Notification result={true} messages={t("notification.success_description")} navigate='/home/landing-page' />
       ) : (
         ""
       )}

@@ -13,10 +13,10 @@ function Navbar() {
       </a>
       <div className='navbar-menu'>
         <Link to="/" className='navbar-menu-title'>{t("navbar.home")}</Link>
-        <div className='navbar-menu-title'>{t("navbar.interface_repository")}</div>
-        <div className='navbar-menu-title'>{t("navbar.price_list")}</div>
-        <div className='navbar-menu-title'>{t("navbar.instructions")}</div>
-        <div className='navbar-menu-title'>{t("navbar.news")}</div>
+        <Link to="/home/landing-page" className='navbar-menu-title'>{t("navbar.interface_repository")}</Link>
+        <Link to="/" className='navbar-menu-title'>{t("navbar.price_list")}</Link>
+        <Link to="/" className='navbar-menu-title'>{t("navbar.instructions")}</Link>
+        <Link to="/" className='navbar-menu-title'>{t("navbar.news")}</Link>
       </div>
       <div className='navbar-right'>
         <Link to='/register' className='navbar-right-btn btn-register'>{t("navbar.register")}</Link>

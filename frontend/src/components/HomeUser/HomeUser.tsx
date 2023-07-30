@@ -17,7 +17,7 @@ function HomeUser() {
     <div className='home-user-container'>
       <SideBar />
       <div className='home-user-container-right' style={{ marginLeft: `${isShowSideBar ? "300px" : "60px"}` }}>
-        <Header />
+      <Header />
         <div className='home-user-container-right-content'>
           <Routes>
             <Route path='landing-page' element={<LandingPage />} />
