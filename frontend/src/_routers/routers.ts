@@ -1,4 +1,4 @@
-import CreatePage from "../components/CreatePage/CreatePage"
+import CreatePage from "../components/HomeUser/CreatePage/CreatePage"
 import Home from "../components/Home/Home";
 import HomeF from "../components/HomeF/HomeF"
 import Page from "../components/Page/Page";

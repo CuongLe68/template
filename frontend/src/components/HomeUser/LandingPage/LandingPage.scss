@@ -1,4 +1,4 @@
-.landingPage-popup-category {
+.landingPage-popup {
   z-index: 9999;
   position: fixed;
   left: 0;
@@ -11,7 +11,6 @@
 
   .container {
     width: 420px;
-    height: 362px;
     border-radius: 10px;
     background: #fff;
     padding-top: 30px;
@@ -24,7 +23,8 @@
       font-size: 24px;
     }
 
-    .body {
+    // category
+    .body-category {
       height: 240px;
       margin-top: 12px;
       overflow-y: auto;
@@ -44,6 +44,53 @@
         p {
           color: #000;
           font-size: 16px;
+        }
+      }
+    }
+
+    // create project
+    .body-project {
+      margin-bottom: 32px;
+      padding: 10px 20px 0;
+
+      .project-item {
+        width: 100%;
+        margin-top: 20px;
+
+        .project-title {
+          color: #000;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+
+        .project-description {
+          margin-top: 10px;
+          display: block;
+          min-height: 30px;
+          max-height: 66px;
+          border-radius: 6px;
+          background: #8c52ff;
+          color: #fff;
+          font-size: 14px;
+          line-height: 18px;
+          padding: 6px 10px;
+        }
+
+        .project-name {
+          width: 100%;
+          margin-top: 10px;
+          padding: 0 8px;
+          outline: none;
+          height: 30px;
+          border-radius: 6px;
+          border: 1px solid #a9b3bb;
+          color: #54595f;
+          font-size: 14px;
+
+          &:focus {
+            border-color: #8c52ff;
+          }
         }
       }
     }
@@ -215,7 +262,7 @@
 
           &::-webkit-scrollbar {
             border-radius: 0;
-            width: 0px;
+            width: 2px;
             background-color: rgba(0, 0, 0, 0);
           }
 
@@ -236,7 +283,6 @@
           margin: 14px 0 10px;
           color: #000;
           font-size: 16px;
-
           display: -webkit-box;
           height: 36px;
           line-height: 18px;

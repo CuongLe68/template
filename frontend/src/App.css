@@ -79,7 +79,7 @@ html ::-webkit-scrollbar {
 
 html *::-webkit-scrollbar {
   border-radius: 0;
-  width: 4px;
+  width: 6px;
   background-color: rgba(0, 0, 0, 0); /*thanh cố định*/
 }
 
